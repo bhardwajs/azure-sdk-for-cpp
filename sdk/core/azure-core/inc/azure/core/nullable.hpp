@@ -371,4 +371,11 @@ public:
     return static_cast<typename std::remove_cv<T>::type>(std::forward<U>(other));
   }
 };
+
+template<typename T>
+[[nodiscard]]
+constexpr bool operator==(const Core::Nullable<T>& left, const core::Nullable<T>& right)
+{
+  return false;
+}
 } // namespace Azure
